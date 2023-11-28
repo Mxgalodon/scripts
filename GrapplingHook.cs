@@ -40,7 +40,7 @@ public class GrapplingHook : MonoBehaviour
     private void TryGrapple()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        Debug.DrawRay(ray.origin, ray.direction * grapplingDistance, Color.red, 2f);  // Add this line
+        Debug.DrawRay(ray.origin, ray.direction * grapplingDistance, Color.red, 2f);
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit, grapplingDistance, grapplingMask))
